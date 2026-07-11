@@ -19,6 +19,7 @@ Advance Operations:
 5) Minimum from a List of Numbers
 
 INPUT VALIDATION:
+
 The calculator includes error handling for:
 1) Invalid Numeric Inputs
 2) Division by Zero
