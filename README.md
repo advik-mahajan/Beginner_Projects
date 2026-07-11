@@ -2,6 +2,7 @@ CALCULATOR CLI -
 A command-line calculator built with Python that performs both basic and complex mathematical operations.
 
 FEATURES:
+
 Basic Operations:
 1) Addition
 2) Subtraction
