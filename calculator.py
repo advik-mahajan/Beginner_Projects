@@ -25,8 +25,20 @@ def sqrt():
     x = get_positive()
     y = square_root(x)
     return y 
-def fact(x):
-    return math.factorial(x)
+def fact():
+    def get_positive():
+        while True:
+            try:
+                num = int(input("Enter the number whose factorial you want to find: "))
+                if num >=0:
+                    return num
+            except ValueError:
+                print("Invalid input. Enter an integer greater than or equal to 0.")
+    def factorial(x):
+        return math.factorial(x)
+    x = get_positive()
+    y = factorial(x)
+    return y 
 def rem(x, y):
     return (x%y)
 def perc(x, y):
@@ -117,54 +129,53 @@ def main():
         if op == 1:
             x = float(input("Enter the first number: "))
             y = float(input("Enter the second number:"))
-            answer = add(x, y)
-            print(answer)
+            ans = add(x, y)
+            print(ans)
         elif op == 2:
             x = float(input("Enter the first number: "))
             y = float(input("Enter the second number: "))
-            answer = sub(x, y)
-            print(answer)
+            ans = sub(x, y)
+            print(ans)
         elif op == 3:
             x = float(input("Enter the first number: "))
             y = float(input("Enter the second number: "))
-            answer = mult(x, y)
-            print(answer)
+            ans = mult(x, y)
+            print(ans)
         elif op == 4:
             x = float(input("Enter the first number: "))
             y = float(input("Enter the second number: "))
-            answer = div(x, y)
-            print(answer)
+            ans = div(x, y)
+            print(ans)
         elif op == 5:
             x = float(input("Enter the base number: "))
             y = float(input("Enter the exponent: "))
-            answer = exp(x, y)
-            print(answer)
+            ans = exp(x, y)
+            print(ans)
         elif op == 6:
-            answer = sqrt()
-            print(f"The square root of the given number is {answer}")
+            ans = sqrt()
+            print(f"The square root of the given number is {ans}")
         elif op == 7:
-            x = int(input("Enter the number: "))
-            answer = fact(x)
-            print(answer)
+            ans = fact()
+            print(f"The factorial of the given number is - {ans}")
         elif op == 8:
             x = float(input("Enter the first number: "))
             y = float(input("Enter the second number: "))
-            answer = rem(x, y)
-            print(f"The remainder is {answer}")
+            ans = rem(x, y)
+            print(f"The remainder is {ans}")
         elif op == 9:
             x = float(input("Enter the first number: "))
             y = float(input("Enter the second number: "))
-            answer = perc(x, y)
-            print(f"{x} is {answer} percent of {y}")
+            ans = perc(x, y)
+            print(f"{x} is {ans} percent of {y}")
         elif op == 10:
-            answer = avg() 
-            print (f"The average of the entered numbers is {answer}.")
+            ans = avg() 
+            print (f"The average of the entered numbers is {ans}.")
         elif op == 11:
-            answer = max()
-            print(f"The largest number is {answer}.")
+            ans = max()
+            print(f"The largest number is {ans}.")
         elif op == 12:
-            answer = min()
-            print(f"The smallest number is {answer}.")
+            ans = min()
+            print(f"The smallest number is {ans}.")
         elif op == 13:
             print("Thank You for using my calculator!!")
             break
