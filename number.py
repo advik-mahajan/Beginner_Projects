@@ -11,53 +11,25 @@ def div(x, y):
     return x / y
 def exp(x, y):
     return x ** y
-def sqrt():
-    def get_positive():
-        while True:
-            try:
-                num = float(input("Enter the number whose square root you want to find: "))
-                if num >= 0:
-                    return num
-            except ValueError:
-                print("Enter a number greater than or equal to zero. ")
-    def square_root(x):
-        return (x ** 0.5)
-    x = get_positive()
-    y = square_root(x)
-    return y 
+def sqrt(x):
+    return x ** 0.5 
 def fact(x):
     return math.factorial(x)
 def rem(x, y):
     return (x%y)
 def perc(x, y):
     return ((x/y)*100)
-def avg():
-    def get_qty():
-        while True:
-            try:
-                qty = int(input("How many values do you want to find the average of? -  "))
-                if qty >= 2:
-                    return qty
-            except ValueError:
-                print("Enter a number greater than or equal to 2.")
-    def average(x):
-        total = float(input("Enter the first number: "))
-        for i in range(x - 1):
-            num = float(input("Enter the next number: "))
-            total = total + num
-        return total 
-    x = get_qty()
-    y = average(x)
-    return (y/x)
+def avg(x, y):
+     return ((x+y)/2)
 def max():
-    def get_qty():
+    def get_number():
         while True:
             try:
                 qty = int(input("Enter the number of values you want to compare: "))
                 if qty >= 2:
                     return qty
             except ValueError:
-                print("Enter a number greater than or equal to 2.")
+                print("Enter a number greater than 2.")
 
     def maximum(x):
         largest = float(input("Enter the first number: "))
@@ -67,17 +39,17 @@ def max():
                 largest = num
         return largest
 
-    x = get_qty()
+    x = get_number()
     return maximum(x)
 def min():
-    def get_qty():
+    def get_number():
         while True:
             try:
                 qty = int(input("Enter the number of values you want to compare: "))
                 if qty >= 2:
                     return qty
             except ValueError:
-                print("Enter a number greater than or equal to 2.")
+                print("Enter a number greater than 2.")
     def minimum(y):
         smallest = float(input("Enter the first number: "))
         for i in range(y - 1):
@@ -85,7 +57,7 @@ def min():
             if num < smallest:
                 smallest = num
         return smallest
-    y = get_qty()
+    y = get_number()
     return minimum(y)
 def main():
     while True:
@@ -140,8 +112,9 @@ def main():
             answer = exp(x, y)
             print(answer)
         elif op == 6:
-            answer = sqrt()
-            print(f"The square root of the given number is {answer}")
+            x = float(input("Enter the number: "))
+            answer = sqrt(x)
+            print(answer)
         elif op == 7:
             x = int(input("Enter the number: "))
             answer = fact(x)
@@ -157,8 +130,10 @@ def main():
             answer = perc(x, y)
             print(f"{x} is {answer} percent of {y}")
         elif op == 10:
-            answer = avg() 
-            print (f"The average of the entered numbers is {answer}.")
+            x = float(input("Enter the first number: "))
+            y = float(input("Enter the second number: "))
+            answer = avg(x, y)
+            print(f"The average of {x} and {y} is {answer}")
         elif op == 11:
             answer = max()
             print(f"The largest number is {answer}.")
