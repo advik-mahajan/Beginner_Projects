@@ -11,6 +11,7 @@ Basic Operations:
 5) Exponentiation
 6) Remainder (Modulo)
 7) Percentage Calculation
+
 Advance Operations:
 1) Square Root Calculator
 2) Factorial
