@@ -1,4 +1,4 @@
-CALCULATOR CLI
+CALCULATOR CLI - 
 A command-line calculator built with Python that performs both basic and complex mathematical operations.
 
 FEATURES:
