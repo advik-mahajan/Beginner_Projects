@@ -21,5 +21,4 @@ TECHNOLOGIES USED:
 FUTURE IMPROVEMENTS:
 1) Limited Number of Attempts (with a "Game Over" state)
 2) Difficulty Levels (by adjusting the range or attempt limit)
-3) Play Again Option
-4) High Score / Best Attempt Tracker
+3) High Score / Best Attempt Tracker
