@@ -11,7 +11,7 @@ def get_input():
             print("Invalid Input.")
 def play_game():
     random_number = random.randint(1, 100)
-    print("The random number chosen is between 0 and 100, both included.")
+    print("The random number is between 0 and 100, both included.")
     number_of_guesses = 0
     while True:
         x = get_input()
