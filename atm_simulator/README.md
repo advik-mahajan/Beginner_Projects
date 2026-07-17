@@ -9,6 +9,7 @@ CORE FUNCTIONALITY:
 6) Continuous Menu Loop (perform multiple transactions in one session)
 
 INPUT VALIDATION: 
+
 THE SIMULATOR INCLUDES ERROR HANDLING FOR:
 1) Invalid Numeric Input (non-numeric PIN or amounts)
 2) Out-of-Range PIN (must be 4-digit)
