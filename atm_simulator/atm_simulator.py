@@ -56,6 +56,35 @@ def deposit():
                 break            
         except ValueError:
             print("Enter a valid amount")
+def emi_calculator():
+    while True:
+        try:
+            principal = float(input("Enter Loan Amount: "))
+            if principal <= 0 :
+                print("Enter a Positive Amount")
+                continue
+            interest_rate = float(input("Enter the Rate of Interest per annum (%): "))
+            if interest_rate <= 0 :
+                print("Enter a Positive Amount")
+                continue
+            time_period = int(input("Enter the Duration of the Loan (in years): "))
+            if time_period <= 0:
+                print("Enter a Positive Amount")
+                continue
+        except ValueError:
+            print("Enter Valid Numeric Value")
+            continue
+        monthly_rate = (interest_rate / 12)/100
+        months = time_period * 12
+        emi = (principal * monthly_rate * (1 + monthly_rate)**months)/(((1+monthly_rate)** months) - 1)
+        emi = round(emi, 2)
+        total_payment = emi * months
+        total_payment = round(total_payment, 2)
+        total_interest = total_payment - principal
+        total_interest = round(total_interest, 2)
+        print(f"EMI: {emi} ")
+        print(f"Total Payment: {total_payment}")
+        print(f"Total Interest: {total_interest}")
 def atm_sim():
     print("Please authenticate your PIN to access the menu.")
     if not authenticate():
@@ -63,10 +92,11 @@ def atm_sim():
     print("Welcome to the ATM Simulator!!")
     print("1. Withdraw Money")
     print("2. Deposit Money")
-    print("3. Exit")
+    print("3. EMI Calculator")
+    print("4. Exit")
     while True:
         try:
-            action = int(input("Enter your choice (1-3): "))
+            action = int(input("Enter your choice (1-4): "))
         except ValueError:
             print("Invalid choice")
             continue
@@ -75,8 +105,11 @@ def atm_sim():
         elif action == 2:
             deposit()
         elif action == 3:
+            emi_calculator()
+        elif action == 4:
             print("Thank You for using ATM Simulator!")
             break
         else:
             print("Enter a valid choice.")
 atm_sim()
+
