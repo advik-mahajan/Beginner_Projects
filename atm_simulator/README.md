@@ -3,7 +3,7 @@ ATM SIMULATOR - A Command-Line ATM Simulator built with Python where the user fi
 FEATURES:
 CORE FUNCTIONALITY:
 
-1. PIN Authenticity (4-digit PIN, 3 attempts before account lockout)
+1. PIN Authenticity (4-digit PIN, 3 attempts before account lockout) - Enter PIN 4444 to use this code
 2. Withdraw Money (with sufficient funds check)
 3. Deposit Money
 4. EMI Calculator (calculates monthly EMI, total payment, and total interest for a loan)
