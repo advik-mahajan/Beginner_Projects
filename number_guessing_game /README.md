@@ -8,6 +8,7 @@ CORE GAMEPLAY:
 5) Attempt Counter Displayed on Winning
 
 INPUT VALIDATION:
+
 The game includes Error Handling for:
 1) Invalid Numeric Input
 2) Out-Of-Range Guesses
