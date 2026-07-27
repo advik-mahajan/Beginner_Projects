@@ -4,7 +4,7 @@ while True:
     while True:
         user_choice = input("Enter Your Move: ").lower().strip()
         if user_choice not in ("rock", "paper", "scissor"):
-            print("Enter a Valid Choice (rock, paper or scissor")
+            print("Enter a Valid Choice (rock, paper or scissor)")
             continue
         break
     print(f"You Chose - {user_choice}")
