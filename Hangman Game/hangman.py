@@ -78,5 +78,15 @@ def hangman():
         print("Congratulations! You Won!")
 
 def main():
-    hangman()
+    while True:
+        hangman()
+        choice = input("Do You Want to Play Again?(yes or no): ").lower().strip()
+        if choice in ("yes", "no"):
+            if choice == "yes":
+                continue
+            else:
+                break
+        else:
+            print("Enter either Yes or No")
+            continue
 main()
